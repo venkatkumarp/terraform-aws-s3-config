@@ -1,0 +1,12 @@
+name: Terraform pipeline
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    uses: githubusername/terraform-reuseable-workflows/.github/workflows/terraform.yml@main
+    with:
+      TF_ACTION: plan
+    secrets:
+      TF_VAR_aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      TF_VAR_aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
