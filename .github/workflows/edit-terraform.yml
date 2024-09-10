@@ -4,7 +4,7 @@ on:
 
 jobs:
   terraform:
-    uses: githubusername/terraform-reuseable-workflows/.github/workflows/terraform.yml@main
+    uses: venkatkumarp/terraform-reuseable-workflows/.github/workflows/terraform.yml@main
     with:
       TF_ACTION: plan
     secrets:
